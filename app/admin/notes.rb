@@ -21,13 +21,12 @@ ActiveAdmin.register Note do
 
 
   index do
-  selectable_column
-
-    column :Subject
-    column 'Title' do |note|
-    link_to note.title, admin_note_path(note)
+    selectable_column
+      column :subject
+      column 'Title' do |note|
+      link_to note.title, admin_note_path(note)
     end
-    column 'body' do |note|
+      column 'body' do |note|
       raw note.body.truncate_words(5)
     end
   end
