@@ -23,8 +23,3 @@ test:
   <<: *default
   database: notebook_test
 
-production:
-  <<: *default
-  database: notebook_production
-  username: notebook
-  password: <%= ENV['PROJECT_DATABASE_PASSWORD'] %>
